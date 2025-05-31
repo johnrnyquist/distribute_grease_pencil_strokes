@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Distribute Grease Pencil Strokes",
     "author": "John Nyquist",
-    "version": (1, 1),
+    "version": (1, 0, 0),
     "blender": (4, 4, 0),
     "location": "View3D > Sidebar > Distribute Strokes",
     "description": "Evenly distribute selected Grease Pencil strokes along X, Y, or Z",
