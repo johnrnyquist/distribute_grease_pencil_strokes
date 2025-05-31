@@ -1,0 +1,53 @@
+schema_version = "1.0.0"
+
+# Unique identifier for the add-on
+id = "distribute_grease_pencil_strokes"
+
+# Version of the add-on
+version = "1.0"
+
+# Human-readable name of the add-on
+name = "Distribute Grease Pencil Strokes"
+
+# Short description (up to 64 characters, no period)
+tagline = "Distribute Grease Pencil strokes along X, Y, or Z"
+
+# Maintainer name and email
+maintainer = "John Nyquist BFCT<blender@nyquist.net>"
+
+# Type of extension
+type = "add-on"
+
+# Optional: link to documentation or source
+website = "https://github.com/username/distribute-grease-pencil-strokes"
+
+# Optional: tags for categorization
+tags = ["Grease Pencil", "Animation"]
+
+# Minimum Blender version
+blender_version_min = "4.4.0"
+
+# License (SPDX identifier)
+license = ["SPDX:GPL-3.0-or-later"]
+
+# Optional: supported platforms (omit for all platforms)
+# platforms = ["windows-x64", "macos-arm64", "linux-x64"]
+
+# Optional: permissions required by the add-on
+[permissions]
+# No permissions needed, as the add-on only modifies in-memory Grease Pencil data
+# files = "Modify Grease Pencil stroke data"
+
+# Optional: build settings
+[build]
+paths = [
+    "distribute_grease_pencil_strokes.py",
+    "README.md",
+    "LICENSE",
+    "demo.gif"
+]
+paths_exclude_pattern = [
+    "__pycache__/",
+    ".*",
+    "*.zip"
+]
