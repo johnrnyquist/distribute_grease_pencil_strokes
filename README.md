@@ -5,7 +5,7 @@ A Blender add-on to evenly distribute selected Grease Pencil strokes along the X
 ![Distribute Grease Pencil Strokes Demo](demo.gif)
 
 ## Description
-The **Distribute Grease Pencil Strokes** add-on allows users to select three or more Grease Pencil strokes and distribute them evenly along a chosen axis (X, Y, or Z) in the 3D Viewport. This is useful for creating uniform arrangements of strokes in Grease Pencil animations or illustrations.
+The **Distribute Grease Pencil Strokes** add-on allows users to select three or more Grease Pencil strokes and distribute them evenly along a chosen axis (X, Y, or Z) in the 3D Viewport. This is useful for creating uniform arrangements of strokes in Grease Pencil.
 
 ## Features
 - Distribute selected Grease Pencil strokes along the X, Y, or Z axis.
@@ -25,7 +25,7 @@ The **Distribute Grease Pencil Strokes** add-on allows users to select three or 
 5. The add-on panel will appear in the 3D Viewport sidebar under the "Distribute Strokes" tab.
 
 ## Usage
-1. In Blender, ensure you are in **Object Mode** or **Draw Mode** with a Grease Pencil object selected.
+1. Select a Grease Pencil object.
 2. Select three or more strokes in the Grease Pencil object.
 3. Open the 3D Viewport sidebar (press `N` if hidden).
 4. Locate the **Distribute Strokes** tab.
@@ -48,14 +48,14 @@ This add-on is licensed under the GNU General Public License (GPL) v3. See the [
 
 ## Support
 For issues, feature requests, or contributions:
-- Create an issue on this repository: [Insert GitHub repository URL here, e.g., https://github.com/username/distribute-grease-pencil-strokes]
+- Create an issue on this [repository](https://github.com/johnrnyquist/distribute-grease-pencil-strokes)
 - Contact the author: John Nyquist <blender@nyquist.net>
 
 ## Contributing
 Contributions are welcome! Please fork the repository, make your changes, and submit a pull request. Ensure your code follows the [Blender API Best Practice guidelines](https://docs.blender.org/api/current/info_best_practice.html).
 
 ## Author
-- **John Nyquist**
+- **John Nyquist BFCT**
 
 ## Version History
 - **1.0.0** (2025-05-31): Initial release with support for Blender 4.4.0.
