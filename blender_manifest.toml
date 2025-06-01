@@ -1,51 +1,26 @@
 schema_version = "1.0.0"
-
-# Unique identifier for the add-on
 id = "distribute_grease_pencil_strokes"
-
-# Version of the add-on
-version = "1.0.0"
-
-# Human-readable name of the add-on
+version = "1.0.1"
 name = "Distribute Grease Pencil Strokes"
-
-# Short description (up to 64 characters, no period)
 tagline = "Distribute Grease Pencil strokes along X, Y, or Z"
-
-# Maintainer name and email
-maintainer = "John Nyquist BFCT<blender@nyquist.net>"
-
-# Type of extension
+maintainer = "John Nyquist BFCT <blender@nyquist.net>"
 type = "add-on"
-
-# Optional: link to documentation or source
-website = "https://github.com/johnrnyquist/distribute-grease-pencil-strokes"
-
-# Optional: tags for categorization
+website = "https://github.com/johnrnyquist/distribute_grease_pencil_strokes"
+issue_tracker = "https://github.com/johnrnyquist/distribute_grease_pencil_strokes/issues"
+copyright = ["2025 John Nyquist"]
 tags = ["Grease Pencil"]
-
-# Minimum Blender version
 blender_version_min = "4.4.0"
-
-# License (SPDX identifier)
 license = ["SPDX:GPL-3.0-or-later"]
 
-# Optional: supported platforms (omit for all platforms)
-# platforms = ["windows-x64", "macos-arm64", "linux-x64"]
-
-# No permissions needed, as the add-on only modifies in-memory Grease Pencil data
-# files = "Modify Grease Pencil stroke data"
-
-# Optional: build settings
 [build]
-paths = [
-    "manifest.toml",
-    "__init__.py",
-    "README.md",
-    "LICENSE"
-]
 paths_exclude_pattern = [
     "__pycache__/",
     ".*",
-    "*.zip"
+    "*.zip",
+    "*.md",
+    "LICENSE",
+    "*.jpg",
+    "*.png",
+    "*.txt",
+    "*.gif"
 ]
