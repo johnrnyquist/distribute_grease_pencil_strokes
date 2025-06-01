@@ -19,7 +19,7 @@ maintainer = "John Nyquist BFCT<blender@nyquist.net>"
 type = "add-on"
 
 # Optional: link to documentation or source
-website = "https://github.com/username/distribute-grease-pencil-strokes"
+website = "https://github.com/johnrnyquist/distribute-grease-pencil-strokes"
 
 # Optional: tags for categorization
 tags = ["Grease Pencil"]
@@ -42,8 +42,7 @@ paths = [
     "manifest.toml",
     "__init__.py",
     "README.md",
-    "LICENSE",
-    "demo.gif"
+    "LICENSE"
 ]
 paths_exclude_pattern = [
     "__pycache__/",

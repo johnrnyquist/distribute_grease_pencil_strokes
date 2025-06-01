@@ -9,8 +9,7 @@ bl_info = {
 }
 
 import bpy
-from bpy.props import EnumProperty, PointerProperty
-
+from bpy.props import EnumProperty
 
 # Helper function to get selected strokes and their count
 def get_selected_strokes(context):
@@ -23,13 +22,12 @@ def get_selected_strokes(context):
             if frame and frame.drawing.strokes:
                 strokes = frame.drawing.strokes
                 selected_strokes = [
-                    (stroke, sum(getattr(p.position, context.scene.gp_distribute_axis.lower()) for p in stroke.points) / len(stroke.points))
+                    (stroke, sum(getattr(p.position, context.window_manager.gp_distribute_axis.lower()) for p in stroke.points) / len(stroke.points))
                     for stroke in strokes if stroke.select and len(stroke.points) > 0
                 ]
                 selected_count = len(selected_strokes)
                 return selected_count, selected_strokes, strokes
     return 0, [], None
-
 
 # Operator to run the distribution
 class GPENCIL_OT_DistributeStrokes(bpy.types.Operator):
@@ -44,7 +42,7 @@ class GPENCIL_OT_DistributeStrokes(bpy.types.Operator):
         return selected_count >= 3
 
     def execute(self, context):
-        axis = context.scene.gp_distribute_axis
+        axis = context.window_manager.gp_distribute_axis
         selected_count, selected_strokes, _ = get_selected_strokes(context)
 
         selected_strokes.sort(key=lambda x: x[1])
@@ -63,7 +61,6 @@ class GPENCIL_OT_DistributeStrokes(bpy.types.Operator):
 
         self.report({'INFO'}, f"Distributed {n - 2} strokes along {axis}-axis.")
         return {'FINISHED'}
-
 
 # UI Panel
 class GPENCIL_PT_DistributePanel(bpy.types.Panel):
@@ -85,16 +82,15 @@ class GPENCIL_PT_DistributePanel(bpy.types.Panel):
         else:
             layout.label(text=f"Strokes Selected: {selected_count}")
 
-        layout.prop(context.scene, "gp_distribute_axis", expand=True)
+        layout.prop(context.window_manager, "gp_distribute_axis", expand=True)
         layout.operator("gpencil.distribute_strokes")
 
-
-# Register axis property in the scene
+# Register axis property in the WindowManager
 def register():
     bpy.utils.register_class(GPENCIL_OT_DistributeStrokes)
     bpy.utils.register_class(GPENCIL_PT_DistributePanel)
 
-    bpy.types.Scene.gp_distribute_axis = EnumProperty(
+    bpy.types.WindowManager.gp_distribute_axis = EnumProperty(
         name="Axis",
         description="Axis to distribute strokes along",
         items=[
@@ -105,12 +101,10 @@ def register():
         default='Z'
     )
 
-
 def unregister():
     bpy.utils.unregister_class(GPENCIL_OT_DistributeStrokes)
     bpy.utils.unregister_class(GPENCIL_PT_DistributePanel)
-    del bpy.types.Scene.gp_distribute_axis
-
+    del bpy.types.WindowManager.gp_distribute_axis
 
 if __name__ == "__main__":
     register()
