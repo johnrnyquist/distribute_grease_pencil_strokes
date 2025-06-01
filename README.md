@@ -18,7 +18,7 @@ The **Distribute Grease Pencil Strokes** add-on allows users to select three or 
 - **Category**: Grease Pencil
 
 ## Installation
-1. Download the `distribute_grease_pencil_strokes.zip` file from this repository.
+1. Download the `distribute_grease_pencil_strokes-1.0.1.zip` file from this repository.
 2. Open Blender and navigate to `Edit > Preferences > Extensions`.
 3. Click `Install from Disk...` and select the `.zip` file.
 4. Enable the add-on by checking the box next to "Grease Pencil: Distribute Grease Pencil Strokes".
