@@ -58,6 +58,8 @@ Contributions are welcome! Please fork the repository, make your changes, and su
 - **John Nyquist BFCT**
 
 ## Version History
+- **1.0.2** (2025-07-07): Now works with multiple layers. Better feedback.
+- **1.0.1** (2025-06-01): Registering with WindowManager. Fixed manifest and updated.
 - **1.0.0** (2025-05-31): Initial release with support for Blender 4.4.0.
 
 ---
