@@ -1,12 +1,12 @@
 schema_version = "1.0.0"
 id = "distribute_grease_pencil_strokes"
-version = "1.0.1"
+version = "1.0.2"
 name = "Distribute Grease Pencil Strokes"
 tagline = "Distribute Grease Pencil strokes along X, Y, or Z"
 maintainer = "John Nyquist BFCT <blender@nyquist.net>"
 type = "add-on"
-website = "https://github.com/johnrnyquist/distribute_grease_pencil_strokes"
-issue_tracker = "https://github.com/johnrnyquist/distribute_grease_pencil_strokes/issues"
+website = "https://projects.blender.org/JohnNyquist/distribute_grease_pencil_strokes"
+issue_tracker = "https://projects.blender.org/JohnNyquist/distribute_grease_pencil_strokes/issues"
 copyright = ["2025 John Nyquist"]
 tags = ["Grease Pencil"]
 blender_version_min = "4.4.0"
