@@ -48,7 +48,7 @@ This add-on is licensed under the GNU General Public License (GPL) v3. See the [
 
 ## Support
 For issues, feature requests, or contributions:
-- Create an issue on this [repository](https://github.com/johnrnyquist/distribute-grease-pencil-strokes)
+- Create an issue on this [repository](https://projects.blender.org/JohnNyquist/distribute_grease_pencil_strokes/issues)
 - Contact the author: John Nyquist <blender@nyquist.net>
 
 ## Contributing
